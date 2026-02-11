@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Caissa School of Chess – Leaderboard</title>
+  <title>Caissa School of Chess – Batch Battle Leaderboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -29,6 +28,8 @@
     /* TOP BANNER */
     .top-banner img {
       width: 100%;
+      max-height: 320px;
+      object-fit: cover;
       display: block;
     }
 
@@ -62,6 +63,7 @@
       margin: 2px 0 0;
       font-size: 0.75rem;
       color: var(--light-brown);
+      letter-spacing: 0.5px;
       text-transform: uppercase;
     }
 
@@ -91,7 +93,6 @@
       100% { opacity: 1; }
     }
 
-    /* MAIN */
     main {
       max-width: 900px;
       margin: auto;
@@ -118,12 +119,12 @@
       justify-content: center;
       font-weight: 600;
       margin-right: 16px;
-      background: linear-gradient(135deg, var(--warm-gold), #d4a23f);
+      background: var(--warm-gold);
     }
 
-    .rank-1 { background: linear-gradient(135deg, #FFD700, #FFC700); }
-    .rank-2 { background: linear-gradient(135deg, #C9CDD3, #B8BFC8); }
-    .rank-3 { background: linear-gradient(135deg, #C18A4A, #B07540); }
+    .rank-1 { background: #FFD700; }
+    .rank-2 { background: #C9CDD3; }
+    .rank-3 { background: #C18A4A; }
 
     .batch-name {
       font-size: 1rem;
@@ -152,32 +153,31 @@
       text-transform: uppercase;
     }
 
-    /* RULES SECTION */
+    /* RULES */
     .rules {
       max-width: 900px;
-      margin: 40px auto;
-      background: var(--off-white);
-      padding: 32px;
-      border-radius: 12px;
+      margin: 60px auto;
+      padding: 0 24px;
+      line-height: 1.7;
     }
 
     .rules h2 {
-      margin-top: 0;
+      color: var(--burnt-orange);
     }
 
-    .rules blockquote {
-      margin-top: 32px;
-      font-size: 20px;
+    blockquote {
+      margin-top: 40px;
+      font-size: 1.4rem;
       font-style: italic;
       text-align: center;
-      color: #444;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
 
-<!-- TOP BANNER -->
+<!-- 🔥 BANNER -->
 <div class="top-banner">
   <img src="banner.jpg" alt="Batch Battle Banner">
 </div>
@@ -196,4 +196,31 @@
   </div>
 </header>
 
-<mai
+<main id="leaderboard"></main>
+
+<section class="rules">
+  <h2>♟️ What is Batch Battle?</h2>
+  <p>
+    Players represent their own batches. Every point earned contributes to the batch score.
+    The batch with the highest combined total wins.
+  </p>
+
+  <h2>🏆 MVPs & Rewards</h2>
+  <ul>
+    <li>Certificate signed by <strong>GM Vishnu Prasanna</strong></li>
+    <li>Featured on Caissa social media</li>
+    <li>Special 1:1 mentor session</li>
+    <li>Live YouTube shout-out</li>
+  </ul>
+
+  <p>
+    Intermediate & Advanced Masterclass batches will have <strong>only MVP awards</strong>.
+  </p>
+
+  <blockquote>
+    “Every game is a lesson.”
+  </blockquote>
+</section>
+
+</body>
+</html>
